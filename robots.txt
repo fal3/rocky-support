@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fal3.github.io/rocky-support/sitemap.xml
