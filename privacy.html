@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <title>Rocky Privacy Policy — Rocky: Falling Sand Puzzle</title>
-  <meta name="description" content="Privacy policy for Rocky, the falling-sand puzzle game: no accounts, no tracking, gameplay data stays on your device.">
+  <meta name="description" content="Privacy policy for Rocky: local progress, optional anonymous analytics, no Rocky account or cross-app tracking.">
   <link rel="canonical" href="https://fal3.github.io/rocky-support/privacy.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Rocky Privacy Policy">
-  <meta property="og:description" content="Privacy policy for Rocky, the falling-sand puzzle game: no accounts, no tracking, gameplay data stays on your device.">
+  <meta property="og:description" content="Privacy policy for Rocky: local progress, optional anonymous analytics, no Rocky account or cross-app tracking.">
   <meta property="og:url" content="https://fal3.github.io/rocky-support/privacy.html">
   <meta property="og:image" content="https://fal3.github.io/rocky-support/assets/og-rocky.jpg">
   <style>
@@ -28,33 +28,60 @@
 <body>
   <main>
     <h1>Rocky Privacy Policy</h1>
-    <p class="effective">Effective July 29, 2026</p>
-    <p>Rocky does not create its own user accounts, transmit its local gameplay
-      analytics to the developer, or track users. Anonymous aggregate gameplay
-      counts are stored locally. Game Center is optional and is not required for
-      any gameplay.</p>
+    <p class="effective">Effective August 2, 2026</p>
+    <p>Rocky does not create its own user accounts or track players across apps or
+      websites. When <strong>Share anonymous analytics</strong> is enabled (the
+      default), Rocky sends anonymous app-usage and gameplay events to TelemetryDeck
+      so the developer can measure active installations, find where players leave
+      the game, and improve level balance. This setting can be turned off at any
+      time. Game Center is optional and is not required for gameplay.</p>
 
     <h2>Information stored on the device</h2>
     <p>Rocky stores game progress, best scores, stars, and audio, graphics, haptics,
       and accessibility preferences locally. This information is used only to
       provide the game and restore the player's choices.</p>
-    <p>Rocky keeps a bounded aggregate summary of app opens, run selections, starts,
-      outcomes, and totals or fixed buckets for statistics such as score, duration,
-      melts, and combos. It stores no raw analytics event history, account
-      identifier, device identifier, or installation identifier. Rocky also retains
-      up to ten completed-run replay journals, including the level rules, random
-      seed, inputs, and final checkpoint, for deterministic replay verification.
-      Rocky does not transmit this data or provide it to the developer or third
-      parties. The operating system may include local app data in backups according
-      to the player's backup settings.</p>
+    <p>Rocky also keeps a bounded on-device aggregate summary of app opens, run
+      selections, starts, outcomes, and totals or fixed buckets for statistics such
+      as score, duration, melts, and combos. It stores no raw analytics event history
+      in that local summary. Rocky also retains up to ten completed-run replay
+      journals, including the level rules, random seed, inputs, and final checkpoint,
+      for deterministic replay verification. Rocky does not transmit the local
+      aggregate or replay journals. The operating system may include local app data
+      in backups according to the player's backup settings.</p>
     <p>Rocky uses system preferences to save settings and the system's monotonic
       clock to measure elapsed gameplay time. If a player signs into Apple Game
       Center, Rocky submits eligible scores and achievements to Apple. Signed-out
       results are never uploaded later.</p>
 
+    <h2>Anonymous analytics</h2>
+    <p>When anonymous analytics is enabled, Rocky sends session starts and run
+      selections, starts, restarts, abandonments, and outcomes. Events can include
+      catalog values such as mode, level, grain tier, and ruleset; outcome and stars;
+      score; and coarse fixed buckets for duration, objective progress, melts, combo
+      size, obstacles, clean clears, and cascade length. TelemetryDeck also adds
+      technical context such as app and build version, platform, system version,
+      device model, language, and region.</p>
+    <p>TelemetryDeck's SDK obtains or generates an identifier specific to the app
+      installation and anonymizes it before transmission so distinct installations
+      and retention can be counted without a Rocky account. Event times are rounded to the hour,
+      and TelemetryDeck states that it does not store IP addresses. Rocky never
+      supplies a name, email address, Apple Account or Game Center identifier,
+      advertising identifier, precise location, run UUID, random seed, player input,
+      replay journal, or board contents. The data is used only for analytics, is not
+      linked to a player's identity, and is not used for advertising or cross-app
+      tracking.</p>
+    <p>Turning off <strong>Settings → Share anonymous analytics</strong> stops future
+      analytics events. Previously received anonymous events may remain in aggregate
+      analytics according to the TelemetryDeck account's retention plan. Because the
+      installation identifier is anonymized and Rocky has no account system, the
+      developer cannot identify or delete one player's historical analytics events.</p>
+
     <h2>Sharing and third parties</h2>
-    <p>Rocky does not sell player information. Optional Game Center player profiles,
-      scores, and achievements are processed by Apple under Apple's privacy policy.</p>
+    <p>Rocky does not sell player information. Anonymous analytics are processed by
+      <a href="https://telemetrydeck.com/privacy/">TelemetryDeck GmbH</a> in Germany.
+      Optional Game Center player profiles, scores, and achievements are processed by
+      Apple under Apple's privacy policy. TelemetryDeck data and Game Center data are
+      not joined.</p>
 
     <h2>Retention and deletion</h2>
     <p>Local progress remains until the player chooses <strong>Reset progress</strong>
@@ -69,7 +96,7 @@
 
     <h2>Children</h2>
     <p>Rocky does not knowingly collect personal information from children or from
-      any other player.</p>
+      any other player. Anonymous analytics may be disabled at any time in Settings.</p>
 
     <h2>Changes and contact</h2>
     <p>If Rocky's data practices change, this policy and the App Store privacy
